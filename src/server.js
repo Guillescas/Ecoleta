@@ -23,7 +23,7 @@ server.get("/create-point", (req, res) => {
 })
 server.post("/save-point", (req, res) => {
   const query = (`
-  INSERT INTO places (
+  INSERT NTO places (
     name,
     image_url,
     adress,

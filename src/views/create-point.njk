@@ -26,22 +26,43 @@
       <div class="field-group">
         <div class="field">
           <label for="name">Nome da entidade</label>
-          <input type="text" name="name" required="required">
+          <input
+            type="text"
+            name="name"
+            required="required"
+            value="{{place.name}}"
+          >
         </div>
         <div class="field">
           <label for="image_url">Imagem da entidade</label>
-          <input type="url" name="image_url" required="required" placeholder="http://">
+          <input
+            type="url"
+            name="image_url"
+            required="required"
+            placeholder="http://"
+            value="{{place.image_url}}"
+          >
         </div>
       </div>
 
       <div class="field-group">
         <div class="field">
           <label for="adress">Endereço</label>
-          <input type="text" name="adress" required="required">
+          <input
+            type="text"
+            name="adress"
+            required="required"
+            value="{{place.adress}}"
+          >
         </div>
         <div class="field">
           <label for="adress2">Número/Complemento</label>
-          <input type="text" name="adress2" required="required">
+          <input
+            type="text"
+            name="adress2"
+            required="required"
+            value="{{place.adress2}}"
+          >
         </div>
       </div>
 
@@ -49,7 +70,7 @@
         <div class="field">
           <label for="state">Estado</label>
           <select name="uf" required="required">
-            <option value="">Selecione o estado</option>
+            <option>Selecione o estado</option>
           </select>
 
           <input type="hidden" name="state">
