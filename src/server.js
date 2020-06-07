@@ -23,7 +23,7 @@ server.get("/create-point", (req, res) => {
 })
 server.post("/save-point", (req, res) => {
   const query = (`
-  INSERT NTO places (
+  INSERT INTO places (
     name,
     image_url,
     adress,
@@ -47,7 +47,10 @@ server.post("/save-point", (req, res) => {
   function afterInsertData(err) {
     if(err) {
       console.error(err)
-      return res.render('create-point.njk', { saved: false })
+      return res.render('create-point.njk', { 
+        saved: false,
+        place: req.body
+      })
     }
 
     console.log('Cadastro realizado com sucesso!')

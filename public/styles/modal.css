@@ -106,3 +106,11 @@
   width: 64px;
   height: 64px;
 }
+
+.point.active {
+  visibility: initial;
+}
+
+.point {
+  visibility: hidden;
+}
