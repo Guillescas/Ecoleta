@@ -21,7 +21,7 @@
 #modal .content {
   color: white;
 
-  width: 420px;
+  width: 620px;
 }
 
 #modal .header {
@@ -100,4 +100,9 @@
   color: white;
 
   margin-top: 32px;
+}
+
+#modal .content img {
+  width: 64px;
+  height: 64px;
 }

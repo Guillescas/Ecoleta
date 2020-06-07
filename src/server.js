@@ -23,7 +23,7 @@ server.get("/create-point", (req, res) => {
 })
 server.post("/save-point", (req, res) => {
   const query = (`
-  INSERT INTO places (
+  INSERT NTO places (
     name,
     image_url,
     adress,
@@ -47,7 +47,7 @@ server.post("/save-point", (req, res) => {
   function afterInsertData(err) {
     if(err) {
       console.error(err)
-      return res.send("Erro ao efetuar cadastro!")
+      return res.render('create-point.njk', { saved: false })
     }
 
     console.log('Cadastro realizado com sucesso!')
@@ -65,7 +65,7 @@ server.get("/search", (req, res) => {
     return res.render('search-results.njk', { total: 0 })
   }
 
-  db.query(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, result) {
+  db.query(`SELECT * FROM places WHERE city ILIKE '%${search}%'`, function(err, result) {
     if(err) {
       return console.error(err)
     }
