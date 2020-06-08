@@ -103,6 +103,16 @@
 }
 
 #modal .content img {
+  width: 24px;
+  height: 24px;
+}
+
+#modal .content #error {
+  width: 64px;
+  height: 64px;
+}
+
+#modal .content #success {
   width: 64px;
   height: 64px;
 }

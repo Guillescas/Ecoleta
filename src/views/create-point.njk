@@ -131,7 +131,7 @@
 {% endblock %}
 
 {% block modal %}
-  {% if saved %}
+  {% if saved == true %}
     {% include "parts/point-created.njk" %}
   {% elseif saved == false %}
     {% include "parts/point-not-created.njk" %}
