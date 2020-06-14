@@ -121,7 +121,7 @@ form .field-group .field + .field {
 }
 
 form button {
-  width: 260px;
+  width: 100%;
   height: 56px;
 
   background-color: var(--primary-color);
